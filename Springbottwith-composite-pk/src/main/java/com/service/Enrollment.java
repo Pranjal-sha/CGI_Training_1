@@ -3,13 +3,14 @@ package com.service;
 
 
 	import java.util.List;
-	import java.util.Optional;
-	import org.springframework.beans.factory.annotation.Autowired;
-	import org.springframework.stereotype.Service;
+import java.util.Optional;
 
-	import com.entity.Enrollment;
-	import com.entity.EnrollmentKey;
-	import com.repository.EnrollmentRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.entity.Enrollment;
+import com.entity.EnrollmentKey;
+import com.repository.EnrollmentRepo;
 
 	@Service
 	public class Enrollment {
@@ -50,6 +51,11 @@ package com.service;
 		public com.entity.Enrollment createEnrollment(com.entity.Enrollment enrollment) {
 			// TODO Auto-generated method stub
 	        return enrollmentRepository.save(enrollment);
+		}
+
+		public Object updateEnrollment(EnrollmentKey ek, com.entity.Enrollment enrollmentDetails) {
+			// TODO Auto-generated method stub
+			return null;
 		}
 	}
 

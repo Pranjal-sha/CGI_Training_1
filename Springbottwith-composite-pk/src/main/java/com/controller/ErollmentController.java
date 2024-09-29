@@ -38,16 +38,16 @@ package com.controller;
 	    public Enrollment createEnrollment(@RequestBody Enrollment enrollment) {
 	        return enrollmentService.createEnrollment(enrollment);
 	    }
-
-	    // Update an enrollment
-	    @PutMapping("/{sid}/{cid}")
-	    public ResponseEntity<Enrollment> updateEnrollment(@PathVariable int sid, @PathVariable int cid,
-	                                                       @RequestBody Enrollment enrollmentDetails) {
-	        EnrollmentKey ek = new EnrollmentKey();
-	        ek.setSid(sid);
-	        ek.setCid(cid);
-	        return ResponseEntity.ok(enrollmentService.updateEnrollment(ek, enrollmentDetails));
-	    }
+//
+//	    // Update an enrollment
+//	    @PutMapping("/{sid}/{cid}")
+//	    public ResponseEntity<Enrollment> updateEnrollment(@PathVariable int sid, @PathVariable int cid,
+//	                                                       @RequestBody Enrollment enrollmentDetails) {
+//	        EnrollmentKey ek = new EnrollmentKey();
+//	        ek.setSid(sid);
+//	        ek.setCid(cid);
+//	        return ResponseEntity.ok(enrollmentService.updateEnrollment(ek, enrollmentDetails));
+//	    }
 
 	    // Delete an enrollment
 	    @DeleteMapping("/{sid}/{cid}")
